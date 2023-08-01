@@ -8,7 +8,7 @@ function calculateAlpha($mutualFundReturns, $marketIndexReturns, $riskFreeRate) 
     $beta = calculateBeta($mutualFundReturns, $marketIndexReturns);
     
     // Calculate average returns for the mutual fund and the market index
-    $averageMutualFundReturn = array_sum($mutualFundReturns) / count($mutualFundReturns);
+    $averageMutualFundReturn = array_sum($mutualFundReturns) / count($mutualFundReturns).3;
     $averageMarketIndexReturn = array_sum($marketIndexReturns) / count($marketIndexReturns);
     
     // Calculate alpha

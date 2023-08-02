@@ -31,10 +31,6 @@ function calculateBeta($mutualFundReturns, $marketIndexReturns) {
     
     return $beta;
 }
-
-
-
-
 try {
     $beta = calculateBeta($mutualFundReturns, $marketIndexReturns);
     echo "The beta of the mutual fund is: " . $beta;

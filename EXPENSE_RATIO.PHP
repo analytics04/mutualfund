@@ -1,4 +1,10 @@
 <?PHP
+// Total expenses of the mutual fund
+$totalExpenses = 250000;
+
+// Fund assets of the mutual fund
+$fundAssets = 10000000;
+
 function calculateExpenseRatio($totalExpenses, $fundAssets)
 {
     // Calculate the expense ratio as a percentage
@@ -6,12 +12,6 @@ function calculateExpenseRatio($totalExpenses, $fundAssets)
     
     return $expenseRatio;
 }
-
-// Total expenses of the mutual fund
-$totalExpenses = 250000;
-
-// Fund assets of the mutual fund
-$fundAssets = 10000000;
 
 // Calculate the expense ratio
 $expenseRatio = calculateExpenseRatio($totalExpenses, $fundAssets);

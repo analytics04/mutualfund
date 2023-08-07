@@ -1,7 +1,7 @@
 <?php
 $sipAmount = 5000;
-$historicalNavData = array(30, 32, 28, 29, 33, 35);
-$currentNav = 40;
+$historicalNavData = [32.7125,32.6423,32.3493,32.0063,31.7533,31.6636,31.5024,31.3858, 31.0646,30.8916,30.8815,30.6866];
+$currentNav = 32.86;
 function calculateSIPReturns($sipAmount, $historicalNavData, $currentNav) {
     // Calculate total number of months for SIP
     $totalMonths = count($historicalNavData);

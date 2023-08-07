@@ -1,8 +1,8 @@
 <?php
 // Example usage:
-$historicalNAV = [50, 52, 49, 55, 58, 60, 62, 66, 68, 70, 75, 80];
-$currentNAV = 85;
-$monthlyInvestment = 10000;
+$historicalNAV = [32.7125,32.6423, 32.3493,32.0063, 31.7533,31.6636, 31.5024,31.3858, 31.0646, 30.8916, 30.8815, 30.6866];
+$currentNAV = 32.86;
+$monthlyInvestment =1000;
 
 function calculateSIPReturns($historicalNAV, $currentNAV, $monthlyInvestment) {
     $months = count($historicalNAV);
@@ -20,6 +20,7 @@ function calculateSIPReturns($historicalNAV, $currentNAV, $monthlyInvestment) {
 
         $currentValueOfUnits[$i] = $currentNAV * $totalUnits;
     }
+    echo $unitsPurchased;
 
     $sipReturns = [];
     for ($i = 0; $i < $months; $i++) {

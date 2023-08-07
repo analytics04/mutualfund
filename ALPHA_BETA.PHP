@@ -1,9 +1,9 @@
 <?php
 
 // Example usage:
-$mutualFundReturn = 20;
-$benchmarkReturn = 15;
-$riskFreeReturn = 10;
+$mutualFundReturn = 714;
+$benchmarkReturn = 708;
+$riskFreeReturn = 600;
 
 function calculateBeta($mutualFundReturn, $benchmarkReturn, $riskFreeReturn) {
     // Check if the denominator is zero to avoid division by zero error

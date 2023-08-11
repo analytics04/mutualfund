@@ -1,7 +1,7 @@
 <?php
-$historicalNAV = [50, 52, 49, 55, 58, 60, 62, 66, 68, 70, 75, 80];
-$currentNAV = 85;
-$monthlyInvestment = 10000;
+$historicalNAV = [30.8815,30.8916,31.0646,31.3858,31.5024,31.6582,31.7533,32.0063,32.3493,32.6423,32.7125,32.8724];
+$currentNAV = 32.8884;
+$monthlyInvestment = 1000;
 
 function calculateSIPReturns($historicalNAV, $currentNAV, $monthlyInvestment) {
     $months = count($historicalNAV);
@@ -13,6 +13,7 @@ function calculateSIPReturns($historicalNAV, $currentNAV, $monthlyInvestment) {
         $investmentAmount = $monthlyInvestment;
         $nav = $historicalNAV[$i];
         $unitsPurchased = $investmentAmount / $nav;
+        echo round($unitsPurchased,2).",";
 
         $totalInvestment += $investmentAmount;
         $totalUnits += $unitsPurchased;
@@ -28,5 +29,6 @@ function calculateSIPReturns($historicalNAV, $currentNAV, $monthlyInvestment) {
 
     return $sipReturns;
 }
-echo "SIP RETURN :".{$sipReturns};
+//echo "SIP RETURN :".calculateSIPReturns($historicalNAV, $currentNAV, $monthlyInvestment);
+var_dump(calculateSIPReturns($historicalNAV, $currentNAV, $monthlyInvestment));
 ?>

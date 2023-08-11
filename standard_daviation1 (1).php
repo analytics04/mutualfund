@@ -1,7 +1,5 @@
 <?php
-$returns = [5.0,
-9.2,
-12.4,16.07,10.6,9.37,8.74,8.51,13.74,13.47,10.81,22.54];
+$returns = [7.20,15.3,14.07];
 
 function calculate_annualized_std_deviation($returns) {
     // Step 1: Calculate the average return (mean)

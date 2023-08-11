@@ -1,8 +1,8 @@
 <?php
-include ("./STANDARD_DAVIATION.PHP");
+include ("./standard_daviation1 (1).PHP");
 
-$returns = [1,2,3,4,5,6];
-$riskFreeRate = 5;
+$returns = [7.93,3.90,14.07];
+$riskFreeRate = 0.06;
 
 
 function calculateSharpeRatio($returns, $riskFreeRate){
@@ -13,7 +13,7 @@ function calculateSharpeRatio($returns, $riskFreeRate){
 
 
     // Step 2: Calculate the standard deviation of returns
-     $standardDeviation = calculateStandardDeviation($returns);
+     $standardDeviation = calculate_annualized_std_deviation($returns);
     echo "Standard Deviation :". $standardDeviation."<br>";
 
     // Step 3: Calculate the excess return
@@ -22,11 +22,11 @@ function calculateSharpeRatio($returns, $riskFreeRate){
 
     // Step 4: Calculate the Sharpe Ratio
     $sharpeRatio = $excessReturn / floatval($standardDeviation);
-    echo "Sharpe Ratio : ".$sharpeRatio ."<br>";
+    echo "Sharpe Ratio : ".$sharpeRatio;
     
-    //return $sharpeRatio;
+
 }
-calculateSharpeRatio($returns,$riskFreeRate);
+
 ?>
 
 

@@ -1,7 +1,12 @@
 <?php
-include ("./standard_daviation1 (1).PHP");
+include("./standareddaviation_14aug.php");
+//$STD_V = 15.25;
 
-$returns = [7.93,3.90,14.07];
+$returns = [20.6,
+16.3,
+26.63
+];
+
 $riskFreeRate = 0.06;
 
 
@@ -27,6 +32,7 @@ function calculateSharpeRatio($returns, $riskFreeRate){
 
 }
 
+calculateSharpeRatio($returns, $riskFreeRate)
 ?>
 
 

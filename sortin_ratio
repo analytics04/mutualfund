@@ -1,0 +1,41 @@
+<?php
+function calculateSortinoRatio($returns, $riskFreeRate)
+{
+    // Step 1: Calculate the mean return
+    $meanReturn = array_sum($returns) / count($returns);
+    
+    // Step 2: Calculate the downside standard deviation
+    $downsideDeviation = calculateDownsideDeviation($returns);
+    
+    // Step 3: Calculate the excess return
+    $excessReturn = $meanReturn - $riskFreeRate;
+    
+    // Step 4: Calculate the Sortino Ratio
+    $sortinoRatio = $excessReturn / $downsideDeviation;
+    
+    return $sortinoRatio;
+}
+
+function calculateDownsideDeviation($returns)
+{
+    $downsideReturns = array_filter($returns, function($return) {
+        return $return < 0;
+    });
+    
+    $downsideDeviation = calculateStandardDeviation($downsideReturns);
+    
+    return $downsideDeviation;
+}
+
+
+// Example returns for a mutual fund
+$returns = [0.05, 0.1, -0.02, 0.08, -0.03];
+
+// Risk-free rate
+$riskFreeRate = 0.02;
+
+// Calculate the Sortino Ratio
+$sortinoRatio = calculateSortinoRatio($returns, $riskFreeRate);
+
+// Output the result
+echo "Sortino Ratio: " . $sortinoRatio;
